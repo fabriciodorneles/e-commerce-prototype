@@ -11,17 +11,22 @@ import {
 import Customer from '@modules/customers/infra/typeorm/entities/Customer';
 import OrdersProducts from '@modules/orders/infra/typeorm/entities/OrdersProducts';
 
+@Entity('order')
 class Order {
+  @PrimaryGeneratedColumn()
   id: string;
 
-  @ManyToOne
+  @ManyToOne(() => Customer)
+  @JoinColumn()
   customer: Customer;
 
-  @OneToMany
+  @OneToMany(() => OrdersProducts, ordersProducts => ordersProducts.order_id)
   order_products: OrdersProducts[];
 
+  @CreateDateColumn()
   created_at: Date;
 
+  @UpdateDateColumn()
   updated_at: Date;
 }
 
