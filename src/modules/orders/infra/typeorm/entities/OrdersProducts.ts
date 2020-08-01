@@ -11,23 +11,34 @@ import {
 import Order from '@modules/orders/infra/typeorm/entities/Order';
 import Product from '@modules/products/infra/typeorm/entities/Product';
 
+@Entity()
 class OrdersProducts {
-  id: string;
+  @PrimaryGeneratedColumn()
+  id!: string;
 
-  order: Order;
+  @ManyToOne(() => Order, order => order.order_products)
+  order!: Order;
 
-  product: Product;
+  @ManyToOne(() => Product, product => product.order_products)
+  product!: Product;
 
-  product_id: string;
+  @Column()
+  @JoinColumn()
+  product_id!: string;
 
-  order_id: string;
+  @Column()
+  order_id!: string;
 
-  price: number;
+  @Column()
+  price!: number;
 
-  quantity: number;
+  @Column()
+  quantity!: number;
 
+  @CreateDateColumn()
   created_at: Date;
 
+  @UpdateDateColumn()
   updated_at: Date;
 }
 

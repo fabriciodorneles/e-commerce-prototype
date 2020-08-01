@@ -14,8 +14,10 @@ import OrdersProducts from '@modules/orders/infra/typeorm/entities/OrdersProduct
 class Order {
   id: string;
 
+  @ManyToOne
   customer: Customer;
 
+  @OneToMany
   order_products: OrdersProducts[];
 
   created_at: Date;
