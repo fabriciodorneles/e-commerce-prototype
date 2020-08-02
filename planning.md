@@ -88,5 +88,11 @@ Customer Entity OK -> Container/Index(Injection)
 ## Rota Post/Products
 - Criar Tabela products/ Migration OK
 - Server OK - App OK - index/Routes OK - /Routes OK - /Controller TODO OK - Service TODO OK - IRepo OK - Repo TODO OK - OK Entity - Container/Index
+## Rota Post/Orders
+- Criar Tabelas e Relações OK
+- Server OK - App OK - index/Routes OK - /Routes OK - /Controller TODO OK - Service TODO OK - IRepo OK - Repo TODO OK - OK Entity - Container/Index
+
+## Rota Get/Orders
+- Server OK - App OK - index/Routes OK - /Routes OK - /Controller TODO OK - Service TODO OK - IRepo OK - Repo TODO OK - OK Entity - Container/Index
 
 
