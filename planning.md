@@ -94,5 +94,5 @@ Customer Entity OK -> Container/Index(Injection)
 
 ## Rota Get/Orders
 - Server OK - App OK - index/Routes OK - /Routes OK - /Controller TODO OK - Service TODO OK - IRepo OK - Repo TODO OK - OK Entity - Container/Index
-
+B
 
